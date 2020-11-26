@@ -1,0 +1,42 @@
+.MainContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin-left: 18rem;
+  
+  padding-left: 5rem;
+ 
+}
+
+.weather_container {
+  
+ 
+  background-color: lightcyan;
+  margin-top: 10rem;
+  position: relative;
+  right: 24rem;
+  top: 1rem;
+  width: 13rem;
+  padding-left: 6rem;
+}
+.search_form{
+  
+  position: relative;
+  top: 7rem;
+  right: 8rem;
+}
+.image {
+  display: flex;
+}
+.temp {
+  display: flex;
+  justify-content: space-around;
+}
+.alert {
+  color: red;
+  font-size: 15px;
+}
+.error {
+  color: red;
+  font-size: 15px;
+}
