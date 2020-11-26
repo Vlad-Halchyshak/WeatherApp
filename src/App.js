@@ -4,10 +4,11 @@ import './App.css'
 import { useSelector } from 'react-redux'
 import { Weather } from './components/weather'
 import { Search } from './components/search'
+import { Loading } from './components/loader'
 
 function App() {
   const data = useSelector((state) => state.weather.data)
-  //const loading = useSelector((state) => state.weather.loading)
+  
   
 
   return (
@@ -15,6 +16,7 @@ function App() {
       <h1>Weather App</h1>
       <Search />
       {data && <Weather data={data} />}
+    
     </div>
   )
 }

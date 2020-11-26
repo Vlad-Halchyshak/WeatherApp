@@ -1,30 +1,26 @@
-.MainContainer {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  margin-left: 18rem;
-  
-  padding-left: 5rem;
- 
-}
 
-.weather_container {
+.MainContainer {
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
   
- 
-  background-color: lightcyan;
-  margin-top: 10rem;
-  position: relative;
-  right: 24rem;
-  top: 1rem;
-  width: 13rem;
-  padding-left: 6rem;
+}
+h1{
+font-family: Georgia, "Times New Roman", Times, serif;;
+}
+.weather_container {
+ background-color: lightcyan;
+  margin-top: 3rem;
+
+  width: 15.5rem;
+  padding-left: 4rem;
 }
 .search_form{
   
-  position: relative;
-  top: 7rem;
-  right: 8rem;
+ margin-top: 2rem;
 }
+
 .image {
   display: flex;
 }
@@ -33,10 +29,28 @@
   justify-content: space-around;
 }
 .alert {
+  
   color: red;
   font-size: 15px;
+   position: absolute;
+  top: 27%;
+  right: 52%;
 }
 .error {
+  
   color: red;
   font-size: 15px;
+   position: absolute;
+  
+  top: 29.5%;
+  right: 52.5%;
+}
+.text-center {
+  position: absolute;
+  top: 32%;
+  right: 50%;
+}
+.btn {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }

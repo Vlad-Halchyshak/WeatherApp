@@ -6,7 +6,7 @@ const SET_LOADING = 'SET_LOADING'
 const initialState = {
   data: null,
   error: '',
-  loading: false,
+  loading: true,
 }
 
 export const WeatherReducer = (state = initialState, action) => {
@@ -15,13 +15,13 @@ export const WeatherReducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.payload,
-        loading: false,
+        
       }
     }
     case SET_LOADING: {
       return {
         ...state,
-        loading: true,
+        loading: action.loading,
       }
     }
     case SET_ERROR: {
@@ -50,16 +50,18 @@ export const setLoading = (loading) => ({
 
 export const getWeather = (city) => async (dispatch) => {
   try {
+    dispatch(setLoading(true))
     const data = await WeatherApi.getWeather(city)
-   
+    dispatch(setLoading(false))
     dispatch(setData(data))
     dispatch(setError(''))
+   
   } catch (error) {
-    
+    dispatch(setLoading(true))
     dispatch(setError('city does not exist'))
+    dispatch(setLoading(false))
     if (!city) {
       dispatch(setError(''))
     }
-    console.log(error)
   }
 }

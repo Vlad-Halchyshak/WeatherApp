@@ -39,7 +39,7 @@ console.log(HandleError)
   return (
     <div className="search_form">
       {alertBoolean && alert && <div className="alert">{alert} </div>}
-       <div className="error">{HandleError}</div>
+      <div className="error">{HandleError}</div>
       <form onSubmit={submitHandle}>
         <input
           value={city}
@@ -47,7 +47,7 @@ console.log(HandleError)
           placeholder="Enter city"
           onChange={changeHandle}
         />
-        <button >Search</button>
+        <button class="btn btn-outline-dark btn-sm">Search</button>
       </form>
     </div>
   )
